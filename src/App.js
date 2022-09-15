@@ -1,75 +1,61 @@
+import React, { useState } from 'react';
 import './App.css';
-const list = [
-  {
-    title: 'React',
-    url: 'https://www.youtube.com/?bp=wgUCEAE%3D',
-    author: 'Jeff Kwan',
-    num_comments: 3,
-    points: 4, 
-    objectID: 0,
-  },
-  {
-    title: 'WTF',
-    url: 'https://www.linkedin.com/jobs/collections/recommended/?currentJobId=3194734192',
-    author: 'Who dafuq',
-    num_comments: 5,
-    points: 6,
-    objectID: 7,
-  }
-]
+import Nav from './components/Nav'
+import rec from './records.json'
 //components for list
-const List = () => {
-  return(
-    <ul>
-      {list.map(function(item){
-        return (
-          <li key={item.objectID}>
-            <span>
-              <a href={item.url}>{item.title}</a>
-            </span>
-            <span>{item.author}</span>
-            <span>{item.num_comments}</span>
-            <span>{item.points}</span>
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-// component for search 
-const Search = () => {
-  return(
-    <div>
-      <label htmlFor='search'>Search: </label>
-      <input id='search' type="text"/>
-    </div>
-  );
-}
+// const List = (props) => (
+//   <ul>
+//     {props.list.map((item) => (
+//       <Item key={item.objectID} item={item} />
+//     ))}
+//   </ul>
+//   );
+
+// const Item = (props) => (
+//   <li>
+//     <span>
+//     <a href={props.item.url}>{props.item.title}</a>
+//       </span>
+//     <span>{props.item.author}</span>
+//     <span>{props.item.num_comments}</span>
+//     <span>{props.item.points}</span>
+//  </li>
+// );
+// // const Item = (props) => {
+// //   <li key={props.objectID}>
+// //     <span>
+// //       <a href={props.url}>{props.title}</a>
+// //     </span>
+// //     <span>{props.author}</span>
+// //     <span>{props.num_comments}</span>
+// //     <span>{props.points}</span>
+// //   </li>
+// // };
+// // component for search 
+// const Search = () => {
+//   const [searchTerm, setSearchTerm] = useState('');
+
+//   const handleChange = (event) =>{
+//     setSearchTerm(event.target.value);
+//   };
+
+//   return(
+//     <div>
+//       <label htmlFor='search'>Search: </label>
+//       <input id='search' type="text" onChange={handleChange}/>
+//       <p>
+//         Searching for <strong>{searchTerm}</strong>
+//       </p>
+//     </div>
+    
+//   );
+// }
+
 
 const App = () => {
-  
-  // instances
-  // const greeting = {
-  //   hi: 'Hello',
-  //   title: 'React',
-  // }; 
-  
-  // Function
-  // function getTitle(title){
-  //   return title;
-  // }
-  
-  //Creating a list
   return (
    <div>
-      <h1>
-        Hello React
-      </h1>
-      <hr/>
-      <List/>
-      <Search/>
-      {/* <label htmlFor='search'>Search</label>
-      <input id='search' type='text' /> */}
+    <Nav data={rec.Social}/>
    </div>
   );
 }
