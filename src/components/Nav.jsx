@@ -1,18 +1,30 @@
-import React from "react";
 //This is gonna be the navigation bar
 //Need to create a list of
 
-const List = (props) => (
-  <ul>  
-    <li><a href={props.Linkedin} target="_blank" rel="noopener noreferrer">Linkedin</a></li>
-    <li><a href={props.Github} target="_blank" rel="noopener noreferrer">Github</a></li>
-    <li><a href="/Resume.pdf" target="_blank">Resume</a></li>
+export const List = (props) => (
+  <ul>
+    <li>
+      <a href={props.Linkedin} target="_blank" rel="noopener noreferrer">
+        Linkedin
+      </a>
+    </li>
+    <li>
+      <a href={props.Github} target="_blank" rel="noopener noreferrer">
+        Github
+      </a>
+    </li>
+    <li>
+      <a href="/Resume.pdf" target="_blank">
+        Resume
+      </a>
+    </li>
   </ul>
 );
 
 export default function Nav(props) {
   return (
-  <div>
-    <List {...props}/>
-  </div>);
+    <div>
+      <List {...props} />
+    </div>
+  );
 }

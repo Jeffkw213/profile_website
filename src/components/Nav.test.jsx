@@ -1,7 +1,6 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import Nav from "./Nav";
-import rec from "../records.json";
+import renderer from 'react-test-renderer';
+import Nav, { List } from './Nav';
+import rec from '../data/records.json';
 
 function toJson(component) {
   const result = component.toJSON();
@@ -10,7 +9,14 @@ function toJson(component) {
   return result;
 }
 
-test("Link changes the class when hovered", () => {
+test('List renders when given data', () => {
+  const component = renderer.create(<List {...rec.Social} />);
+
+  let tree = toJson(component);
+  expect(tree).toMatchSnapshot();
+});
+
+test('Nav renders when given data', () => {
   const component = renderer.create(<Nav {...rec.Social} />);
 
   let tree = toJson(component);

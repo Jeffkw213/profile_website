@@ -1,16 +1,15 @@
-export default function Work(props) {
-    console.log(props.employ[0])
-
+export default function Work({ employ }) {
   return (
     <>
-        {props.employ.map((item,index)=>{
-            return (
-            <div key={index}>
-                {item.Role}
-                <p>{item.Description}</p>
-                <p>{item.Date}</p>
-            </div>)
-        })}
+      {employ.map((item, index) => {
+        return (
+          <div key={index}>
+            {item.Role}
+            <p>{item.Description}</p>
+            <p>{item.Date}</p>
+          </div>
+        );
+      })}
     </>
-  )
+  );
 }
