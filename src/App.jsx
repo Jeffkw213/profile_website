@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './App.css';
-import Nav from './components/Nav'
-import rec from './records.json'
+import React, { useState } from "react";
+import "./App.css";
+import Nav from "./components/Nav";
+import rec from "./records.json";
 //components for list
 // const List = (props) => (
 //   <ul>
@@ -31,7 +31,7 @@ import rec from './records.json'
 // //     <span>{props.points}</span>
 // //   </li>
 // // };
-// // component for search 
+// // component for search
 // const Search = () => {
 //   const [searchTerm, setSearchTerm] = useState('');
 
@@ -47,10 +47,9 @@ import rec from './records.json'
 //         Searching for <strong>{searchTerm}</strong>
 //       </p>
 //     </div>
-    
+
 //   );
 // }
-
 
 const App = () => {
   return (
@@ -58,6 +57,6 @@ const App = () => {
       <Nav {...rec.Social} />
     </div>
   );
-}
+};
 
 export default App;
