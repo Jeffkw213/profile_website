@@ -56,7 +56,7 @@ import records from './data/records.json';
 
 const App = () => {
   return (
-    <div className="bg-slate-600">
+    <div className="bg-zinc-300">
       <Nav {...records.Social} />
       <Title {...records.Who} />
       <Education {...records.Education} />

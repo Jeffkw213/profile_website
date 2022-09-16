@@ -23,7 +23,7 @@ export const List = (props) => (
 
 export default function Nav(props) {
   return (
-    <div>
+    <div className="flex top-[3px]">
       <List {...props} />
     </div>
   );
