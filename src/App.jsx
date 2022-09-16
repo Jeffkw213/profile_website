@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import "./App.css";
+import Connection from "./components/Connection";
+
+import Education from "./components/Education";
 import Nav from "./components/Nav";
-import rec from "./records.json";
+import Projects from "./components/Projects";
+import Title from "./components/Title";
+import Work from "./components/Work";
+import rec from "./data/records.json";
 //components for list
 // const List = (props) => (
 //   <ul>
@@ -53,8 +58,13 @@ import rec from "./records.json";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-slate-600">
       <Nav {...rec.Social} />
+      <Title {...rec.Who}/>
+      <Education {...rec.Education}/>
+      <Work employ={rec.Employment}/>
+      <Connection {...rec.Social} />
+      <Projects/>
     </div>
   );
 };

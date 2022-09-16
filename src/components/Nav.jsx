@@ -1,17 +1,18 @@
 import React from "react";
 //This is gonna be the navigation bar
 //Need to create a list of
-const Item = (props) => (
-  <lu>
-    <li>
-      <a href={props.item.url}>{props.item.title}</a>
-    </li>
-    <li>{props.item.author}</li>
-    <li>{props.item.num_comments}</li>
-    <li>{props.item.points}</li>
-  </lu>
+
+const List = (props) => (
+  <ul>  
+    <li><a href={props.Linkedin} target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+    <li><a href={props.Github} target="_blank" rel="noopener noreferrer">Github</a></li>
+    <li><a href="/Resume.pdf" target="_blank">Resume</a></li>
+  </ul>
 );
 
 export default function Nav(props) {
-  return <div className="text-jeff">mycooltext</div>;
+  return (
+  <div>
+    <List {...props}/>
+  </div>);
 }
