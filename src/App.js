@@ -54,9 +54,9 @@ import rec from './records.json'
 
 const App = () => {
   return (
-   <div>
-    <Nav data={rec.Social}/>
-   </div>
+    <div>
+      <Nav {...rec.Social} />
+    </div>
   );
 }
 
