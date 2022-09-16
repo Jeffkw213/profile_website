@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import Connection from "./components/Connection";
-
-import Education from "./components/Education";
-import Nav from "./components/Nav";
-import Projects from "./components/Projects";
-import Title from "./components/Title";
-import Work from "./components/Work";
-import rec from "./data/records.json";
+import Connection from './components/Connection';
+import Education from './components/Education';
+import Nav from './components/Nav';
+import Projects from './components/Projects';
+import Title from './components/Title';
+import Work from './components/Work';
+import records from './data/records.json';
 //components for list
 // const List = (props) => (
 //   <ul>
@@ -59,12 +57,12 @@ import rec from "./data/records.json";
 const App = () => {
   return (
     <div className="bg-slate-600">
-      <Nav {...rec.Social} />
-      <Title {...rec.Who}/>
-      <Education {...rec.Education}/>
-      <Work employ={rec.Employment}/>
-      <Connection {...rec.Social} />
-      <Projects/>
+      <Nav {...records.Social} />
+      <Title {...records.Who} />
+      <Education {...records.Education} />
+      <Work employ={records.Employment} />
+      <Connection {...records.Social} />
+      <Projects />
     </div>
   );
 };

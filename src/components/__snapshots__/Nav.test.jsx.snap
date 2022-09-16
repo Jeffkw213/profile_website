@@ -1,0 +1,98 @@
+// Vitest Snapshot v1
+
+exports[`Link changes the class when hovered 1`] = `
+<div>
+  <ul>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/jeff-kwan-881a41203/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Linkedin
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/Jeffkw213"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+    </li>
+    <li>
+      <a
+        href="/Resume.pdf"
+        target="_blank"
+      >
+        Resume
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`List renders when given data 1`] = `
+<ul>
+  <li>
+    <a
+      href="https://www.linkedin.com/in/jeff-kwan-881a41203/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Linkedin
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://github.com/Jeffkw213"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Github
+    </a>
+  </li>
+  <li>
+    <a
+      href="/Resume.pdf"
+      target="_blank"
+    >
+      Resume
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Nav renders when given data 1`] = `
+<div>
+  <ul>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/jeff-kwan-881a41203/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Linkedin
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://github.com/Jeffkw213"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Github
+      </a>
+    </li>
+    <li>
+      <a
+        href="/Resume.pdf"
+        target="_blank"
+      >
+        Resume
+      </a>
+    </li>
+  </ul>
+</div>
+`;
