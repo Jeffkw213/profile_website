@@ -1,0 +1,29 @@
+export default function Skillz(props) {
+  return (
+    <div id="skill">
+      <div>
+        <ul>
+        {props.Languages.map((item) => {
+          return <li key={item.toString}>{item}</li>;
+        })}
+      </div>
+      </ul>
+      
+      <div>
+        {props.Framework.map((item) => {
+          return <li key={item.toString}>{item}</li>;
+        })}
+      </div>
+      <div>
+        {props.Platform.map((item) => {
+          return <li key={item.toString}>{item}</li>;
+        })}
+      </div>
+      <div>
+        {props.Techniques.map((item) => {
+          return <li key={item.toString}>{item}</li>;
+        })}
+      </div>
+    </div>
+  );
+}
