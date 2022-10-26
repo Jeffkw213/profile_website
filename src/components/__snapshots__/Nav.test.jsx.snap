@@ -1,67 +1,114 @@
 // Vitest Snapshot v1
 
 exports[`List renders when given data 1`] = `
-<ul>
-  <li>
-    <a
-      href="https://www.linkedin.com/in/jeff-kwan-881a41203/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Linkedin
-    </a>
-  </li>
-  <li>
-    <a
-      href="https://github.com/Jeffkw213"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Github
-    </a>
-  </li>
-  <li>
-    <a
-      href="/Resume.pdf"
-      target="_blank"
-    >
-      Resume
-    </a>
-  </li>
-</ul>
-`;
-
-exports[`Nav renders when given data 1`] = `
-<div
-  className="flex top-[3px]"
+<nav
+  className="flex justify-center"
 >
-  <ul>
-    <li>
+  <ul
+    className=""
+  >
+    <li
+      className="inline-block"
+    >
       <a
         href="https://www.linkedin.com/in/jeff-kwan-881a41203/"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Linkedin
+        <img
+          alt="Linkedin Logo"
+          className="h-16 opacity-[.35]"
+          src="/src/data/LI-In-Bug.png"
+        />
       </a>
     </li>
-    <li>
+    <li
+      className="inline-block"
+    >
       <a
         href="https://github.com/Jeffkw213"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Github
+        <img
+          alt="Git Logo"
+          className="h-16 opacity-[.35]"
+          src="/src/data/GitHub-Mark-64px.png"
+        />
       </a>
     </li>
-    <li>
+    <li
+      className="inline-block ml-2"
+    >
       <a
-        href="/Resume.pdf"
-        target="_blank"
+        href="mailto:jeffkwan10@gmail.com?subject=Hi%20I'm%20Stupid"
       >
-        Resume
+        <img
+          alt="Gmail Logo"
+          className="h-16 opacity-[.35]"
+          src="/src/data/Gmail_Logo_64px.png"
+        />
       </a>
     </li>
   </ul>
+</nav>
+`;
+
+exports[`Nav renders when given data 1`] = `
+<div
+  className="h-20 relative w-full py-2 text-center bg-black"
+  id="contacts"
+>
+  <nav
+    className="flex justify-center"
+  >
+    <ul
+      className=""
+    >
+      <li
+        className="inline-block"
+      >
+        <a
+          href="https://www.linkedin.com/in/jeff-kwan-881a41203/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Linkedin Logo"
+            className="h-16 opacity-[.35]"
+            src="/src/data/LI-In-Bug.png"
+          />
+        </a>
+      </li>
+      <li
+        className="inline-block"
+      >
+        <a
+          href="https://github.com/Jeffkw213"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Git Logo"
+            className="h-16 opacity-[.35]"
+            src="/src/data/GitHub-Mark-64px.png"
+          />
+        </a>
+      </li>
+      <li
+        className="inline-block ml-2"
+      >
+        <a
+          href="mailto:jeffkwan10@gmail.com?subject=Hi%20I'm%20Stupid"
+        >
+          <img
+            alt="Gmail Logo"
+            className="h-16 opacity-[.35]"
+            src="/src/data/Gmail_Logo_64px.png"
+          />
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
 `;
