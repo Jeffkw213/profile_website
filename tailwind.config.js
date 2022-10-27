@@ -54,7 +54,12 @@ module.exports = {
           700: '#cf0423',
           800: '#c50019',
           900: '#bb000f'
-        }
+        },
+        dark: '#222831',
+        something: '#393E46',
+        idk: '#00ADB5',
+        light: '#EEEEEE'
+
       },
       fontFamily: {
         Exo: "'Exo', sans-serif",

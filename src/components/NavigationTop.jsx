@@ -2,16 +2,16 @@ import { RiContactsLine } from 'react-icons/ri';
 import 'aos/dist/aos.css';
 
 export default function ButtonNavi() {
-  const Button = (props) => (
+  const Button = ({ name }) => (
     <button className="flex m-2 p-2 px-3 text-white transition delay-150 duration-300 ease-in-out hover:scale-110">
-      {props.name}
+      {name}
     </button>
   );
 
-  const SpecialButton = (props) => (
+  const SpecialButton = ({ name }) => (
     <button className="flex items-center justify-center m-2 p-2 px-3 bg-transparent text-white border border-slate-300 transition delay-150 duration-300 ease-in-out  hover:rotate-x-360">
       <RiContactsLine className=" text-white mr-2" />
-      {props.name}
+      {name}
     </button>
   );
 

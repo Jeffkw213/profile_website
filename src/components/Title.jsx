@@ -19,6 +19,8 @@ export default function Title({ Name, Description }) {
   const BackGround = () => (
     <div className="absolute inset-0.5 bg-gradient-to-r from-red-600 to-blue-600 rounded-full blur-2xl bg-opacity-80"></div>
   );
+
+
   const SomeButtons = () => (
     <div className="flex items-center justify-center py-2">
       <a href="#project" className="px-2">
@@ -34,22 +36,28 @@ export default function Title({ Name, Description }) {
       </a>
     </div>
   );
+
+
   const About = () => (
     <div>
       <h1 className="font-Nexa text-4xl sm:text-7xl text-shadow-md text-center pt-4 pb-2">{Name}</h1>
       <p className="p-4 mx-0 sm:mx-14 max-w-screen-lg text-shadow-md min-w-[50%]">{Description}</p>
     </div>
   );
+
+
+
   const Body = () => (
     <div className="relative max-w-[880px]">
       <BackGround />
       <div className="relative m-2 py-12 text-white ">
         <About />
-        {/* Buttons */}
         <SomeButtons />
       </div>
     </div>
   );
+
+  
   return (
     <div className="bg-black max-w-1/2 w-full px-4" id="home">
       <div>

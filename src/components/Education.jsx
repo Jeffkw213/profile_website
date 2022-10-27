@@ -9,7 +9,7 @@ export default function Education(props) {
   });
   return (
     <div
-      className="h-screen p-2 bg-cover bg-center text-black flex justify-center text-justify-center static max-w-1/2 w-full px-4"
+      className="h-screen bg-cover bg-center text-black flex justify-center text-justify-center static max-w-1/2 w-full px-4"
       id="education"
       style={{ backgroundImage: `url(${School})` }}
 

@@ -1,32 +1,27 @@
-export default function Skillz(props) {
+export default function Skillz({Languages, Framework, Platform, Techniques}) {
   return (
     <div id="skill" className="h-screen m-20">
-      {/* <div>
-        {props.map((item, i) => {
-          return <li key={i}>{item}</li>;
-        })}
-      </div> */}
       <div className="border-4 m-4 p-4 ">
         <header>Languages</header>
-        {props.Languages.map((item, i) => {
+        {Languages.map((item, i) => {
           return <li key={`1${i}`}>{item}</li>;
         })}
       </div>
       <div className="border-4 m-4 p-4 ">
         <header>Framework</header>
-        {props.Framework.map((item, i) => {
+        {Framework.map((item, i) => {
           return <li key={`1${i}`}>{item}</li>;
         })}
       </div>
       <div className="border-4 m-4 p-4 ">
         <header>Platform</header>
-        {props.Platform.map((item, i) => {
+        {Platform.map((item, i) => {
           return <li key={i}>{item}</li>;
         })}
       </div>
       <div className="border-4 m-4 p-4 ">
         <header>Techniques</header>
-        {props.Techniques.map((item, i) => {
+        {Techniques.map((item, i) => {
           return <li key={i}>{item}</li>;
         })}
       </div>
