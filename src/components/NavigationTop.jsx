@@ -33,7 +33,7 @@ export default function ButtonNavi() {
   );
 
   return (
-    <header className="fixed flex w-full justify-end item-center h-20">
+    <header className="fixed flex w-full justify-end item-center h-20 z-50">
       <nav className="p-3 text-center">
         <NavButtons />
       </nav>

@@ -3,23 +3,73 @@
 // And there would be a navigation button to scroll to a certain section of the page
 import { FaProjectDiagram } from 'react-icons/fa';
 import { BiArrowToBottom } from 'react-icons/bi';
+import { useState, useEffect } from 'react';
+import anime from 'animejs/lib/anime.es.js'; //https://www.npmjs.com/package/animejs
+
 export default function Title({ Name, Description }) {
-  function Stars() {
-    const arr = [];
-    for (let i = 0; i < 100; i++) {
-      var vw = 111; //getting the width of the window
-      var vh = 200; //getting the height of the window
-      arr.push(
-        <div className={`bg-white w-2 h-2 rounded-full absolute top-[${vh}px] left-[${vw}px]`} key={`${i}`}></div>
-      );
-    }
-    return arr;
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  });
+
+  function handleResize() {
+    setDimensions({
+      height: Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
+      width: Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    });
   }
 
-  const BackGround = () => (
-    <div className="absolute inset-0.5 bg-gradient-to-r from-red-600 to-blue-600 rounded-full blur-2xl bg-opacity-80"></div>
-  );
+  useEffect(() => {
+    // Update the document title using the browser API
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
+  let columns = Math.floor(dimensions.width / 50),
+    rows = Math.floor(dimensions.height / 50);
+  let toggled = false;
+
+  const visible = ({ toggled }) => {
+    var x = document.getElementById('myDIV');
+    if (x.style.visibility === 'hidden') {
+      x.style.visibility = 'visible';
+    } else {
+      x.style.visibility = 'hidden';
+    }
+  }
+
+  const ripple = (index) => {
+    toggled = !toggled;
+    console.log(index)
+    anime({
+      targets: '#tiles',
+      opacity: toggled ? 0 : 1,
+      delay: anime.stagger(50, {
+        grid: [columns, rows], 
+        from: index
+      })
+    });
+    console.log('ripple');
+  };
+
+
+  const Tiles = ({ index }) => (
+    <button
+      id="tiles"
+      className="h-[50px] w-[50px] relative m-[1px] bg-stone-900 inline-block rounded-md"
+      onClick={() =>ripple(index)}
+    ></button>
+  );
+  const CreateTiles = ({ num }) => {
+    var array = [];
+    for (let i = 0; i < num; i++) {
+      array.push(<Tiles key={i} index={i}/>);
+    }
+    return array;
+  };
 
   const SomeButtons = () => (
     <div className="flex items-center justify-center py-2">
@@ -37,7 +87,6 @@ export default function Title({ Name, Description }) {
     </div>
   );
 
-
   const About = () => (
     <div>
       <h1 className="font-Nexa text-4xl sm:text-7xl text-shadow-md text-center pt-4 pb-2">{Name}</h1>
@@ -45,11 +94,8 @@ export default function Title({ Name, Description }) {
     </div>
   );
 
-
-
   const Body = () => (
     <div className="relative max-w-[880px]">
-      <BackGround />
       <div className="relative m-2 py-12 text-white ">
         <About />
         <SomeButtons />
@@ -57,14 +103,19 @@ export default function Title({ Name, Description }) {
     </div>
   );
 
-  
+  const ClickMe = () => (
+    <div className='text-9xl absolute uppercase bg-transparent'>CLICK ANYWHERE</div>
+  );
+
   return (
-    <div className="bg-black max-w-1/2 w-full px-4" id="home">
-      <div>
-        <Stars />
-      </div>
-      <div className="flex items-center justify-center h-screen">
+    <div id="home">
+      <div className="flex items-center justify-center h-screen min-h-max">
         <Body />
+        <div style={{ '--columns': columns }} className={`custom-cols w-full max-w-full overflow-clip grid absolute`}>
+          <CreateTiles num={columns * rows} />
+        </div>
+        <ClickMe />
+
       </div>
     </div>
   );

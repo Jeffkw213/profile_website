@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 const rotateY = plugin(function ({ addUtilities }) {
   addUtilities({
@@ -13,10 +13,10 @@ const rotateY = plugin(function ({ addUtilities }) {
     //   transform: 'rotateX(60deg)',
     // },
     '.rotate-y-360': {
-      transform: 'rotateY(360deg)',
-    },
-  })
-})
+      transform: 'rotateY(360deg)'
+    }
+  });
+});
 
 const rotateX = plugin(function ({ addUtilities }) {
   addUtilities({
@@ -30,17 +30,18 @@ const rotateX = plugin(function ({ addUtilities }) {
     //   transform: 'rotateX(60deg)',
     // },
     '.rotate-x-360': {
-      transform: 'rotateX(360deg)',
-    },
-  })
-})
+      transform: 'rotateX(360deg)'
+    }
+  });
+});
+
 module.exports = {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
       spacing: {
-        '128': '32rem',
-        '132': '38rem'
+        128: '32rem',
+        132: '38rem'
       },
       colors: {
         york: {
@@ -55,11 +56,10 @@ module.exports = {
           800: '#c50019',
           900: '#bb000f'
         },
-        dark: '#222831',
-        something: '#393E46',
-        idk: '#00ADB5',
-        light: '#EEEEEE'
-
+        dark: '#06283D',
+        something: '#1363DF',
+        idk: '#47B5FF',
+        nani: '#DFF6FF'
       },
       fontFamily: {
         Exo: "'Exo', sans-serif",
@@ -70,6 +70,16 @@ module.exports = {
       },
       minWidth: {
         '1/2': '50%'
+      },
+      inset: {
+        '3px': '3px'
+      },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        37: 'repeat(41, 1fr)',
+
+        // Complex site-specific column configuration
+        footer: '200px minmax(900px, 1fr) 100px'
       }
     }
   },

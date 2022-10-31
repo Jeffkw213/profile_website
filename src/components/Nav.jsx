@@ -4,7 +4,7 @@ import Git from '../data/GitHub-Mark-64px.png';
 import Linkedin from '../data/LI-In-Bug.png';
 import Gmail from '../data/Gmail_Logo_64px.png';
 export const List = (props) => (
-  <nav className="flex justify-center">
+  <nav className="flex justify-center h-fit">
     <ul className="">
       <li className="inline-block">
         <a href={props.Linkedin} target="_blank" rel="noopener noreferrer">
@@ -27,7 +27,7 @@ export const List = (props) => (
 
 export default function Nav(props) {
   return (
-    <div className="h-20 relative w-full py-2 text-center bg-black" id='contacts'>
+    <div className="h-20 relative w-full py-2 text-center" id='contacts'>
       <List {...props} />
     </div>
   );
